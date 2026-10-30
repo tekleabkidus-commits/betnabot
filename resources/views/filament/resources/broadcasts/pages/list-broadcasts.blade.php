@@ -27,7 +27,7 @@
                 <span>Live content preview</span>
                 <div class="studio-preview-phone">
                     <div class="studio-preview-notch"></div>
-                    <div class="studio-preview-brand">◉ KemerBet</div>
+                    <div class="studio-preview-brand">◉ Betna</div>
                     <div class="studio-preview-bubble">{{ $previewText ? \Illuminate\Support\Str::limit($previewText, 145) : 'Your campaign will appear here when you add a message.' }}</div>
                     <div class="studio-preview-time">Telegram · {{ now()->timezone(config('app.display_timezone'))->format('H:i') }}</div>
                 </div>

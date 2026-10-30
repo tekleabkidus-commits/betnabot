@@ -1,4 +1,4 @@
-# KemerBot — Operations Runbook (spec §18)
+# BetnaBot — Operations Runbook (spec §18)
 
 Audience: whoever operates the production deployment. Marketers never need this file.
 

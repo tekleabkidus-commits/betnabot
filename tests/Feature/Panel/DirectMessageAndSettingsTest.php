@@ -23,12 +23,12 @@ it('delivers a direct message and records it in the conversation', function () {
     $admin = Admin::factory()->marketer()->create();
     $user = User::factory()->create();
 
-    (new SendDirectMessageJob($user->id, $admin->id, 'Hi from KemerBet support!'))
+    (new SendDirectMessageJob($user->id, $admin->id, 'Hi from Betna support!'))
         ->handle(app(BotMessageSender::class));
 
     $message = TelegramMessage::query()->first();
 
-    expect(fakeTelegram()->lastSentTo($user->tg_chat_id)['params']['text'])->toBe('Hi from KemerBet support!')
+    expect(fakeTelegram()->lastSentTo($user->tg_chat_id)['params']['text'])->toBe('Hi from Betna support!')
         ->and($message->direction)->toBe(MessageDirection::AdminOutbound)
         ->and($message->admin_id)->toBe($admin->id)
         ->and($message->tg_message_id)->not->toBeNull();

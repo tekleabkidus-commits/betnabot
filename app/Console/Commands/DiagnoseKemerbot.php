@@ -35,7 +35,7 @@ class DiagnoseKemerbot extends Command
 
     public function handle(): int
     {
-        $this->line('KemerBot diagnose — '.now()->toIso8601String().' (UTC)');
+        $this->line('BetnaBot diagnose — '.now()->toIso8601String().' (UTC)');
         $this->line(str_repeat('=', 60));
 
         $this->section('1) MenuItems admin page render', fn () => $this->renderCheck());

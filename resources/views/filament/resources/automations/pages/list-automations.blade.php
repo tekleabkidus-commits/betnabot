@@ -48,7 +48,7 @@
                 <div class="studio-automation-inspector-card"><span>Message steps</span><strong>{{ $selected->steps->count() }}</strong></div>
                 <div class="studio-automation-inspector-card"><span>Cooldown</span><strong>{{ $selected->cooldown_days }} days</strong></div>
                 <a class="studio-cta" href="{{ \App\Filament\Resources\Automations\AutomationResource::getUrl('edit',['record'=>$selected]) }}">Edit this journey →</a>
-                <p class="studio-automation-limits">This canvas reflects the actual sequential trigger, wait and message steps. Conditional branching is not yet supported by KemerBot's automation engine.</p>
+                <p class="studio-automation-limits">This canvas reflects the actual sequential trigger, wait and message steps. Conditional branching is not yet supported by BetnaBot's automation engine.</p>
             @else
                 <a class="studio-cta" href="{{ \App\Filament\Resources\Automations\AutomationResource::getUrl('create') }}">Create automation</a>
             @endif

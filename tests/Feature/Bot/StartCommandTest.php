@@ -31,7 +31,7 @@ it('creates a new user and sends the welcome as the /start reply', function () {
 
     expect($sent)->toHaveCount(1)
         ->and($sent[0]['params']['text'])->toContain('Sara')
-        ->and($sent[0]['params']['text'])->toContain('KemerBet');
+        ->and($sent[0]['params']['text'])->toContain('Betna');
 });
 
 it('fires UserJoined for new users only', function () {
@@ -64,7 +64,7 @@ it('refreshes profile fields when telegram reports changes', function () {
 });
 
 it('attaches the main menu keyboard to the welcome when menus exist', function () {
-    $item = MenuItem::factory()->url('https://kemerbet.co')->create();
+    $item = MenuItem::factory()->url('https://example.test')->create();
     MenuItemTranslation::factory()->for($item)->create(['label' => 'Visit site']);
 
     postWebhook(telegramMessageUpdate(2001, '/start'));
@@ -73,7 +73,7 @@ it('attaches the main menu keyboard to the welcome when menus exist', function (
 
     expect($keyboard['inline_keyboard'][0][0])->toMatchArray([
         'text' => 'Visit site',
-        'url' => 'https://kemerbet.co',
+        'url' => 'https://example.test',
     ]);
 });
 

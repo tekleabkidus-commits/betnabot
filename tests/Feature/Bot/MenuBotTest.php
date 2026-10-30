@@ -22,25 +22,25 @@ function menuItem(array $attrs = [], string $label = 'Item', ?string $replyText 
 }
 
 it('sends the translated reply for a reply action', function () {
-    $item = menuItem(label: 'About us', replyText: 'KemerBet — Ethiopia’s home of sport.');
+    $item = menuItem(label: 'About us', replyText: 'Betna — Ethiopia’s home of sport.');
 
     postWebhook(telegramCallbackUpdate(6001, "menu:{$item->id}"));
 
     expect(fakeTelegram()->lastSentTo(6001)['params']['text'])
-        ->toBe('KemerBet — Ethiopia’s home of sport.')
+        ->toBe('Betna — Ethiopia’s home of sport.')
         ->and(fakeTelegram()->callsTo('answerCallbackQuery'))->toHaveCount(1);
 });
 
 it('renders submenu children with a back button', function () {
     $parent = menuItem(['action_type' => 'submenu'], label: 'Games');
-    $child = MenuItem::factory()->for($parent, 'parent')->url('https://kemerbet.co/games')->create();
+    $child = MenuItem::factory()->for($parent, 'parent')->url('https://example.test/games')->create();
     MenuItemTranslation::factory()->for($child)->create(['label' => 'All games']);
 
     postWebhook(telegramCallbackUpdate(6001, "menu:{$parent->id}"));
 
     $rows = fakeTelegram()->lastSentTo(6001)['params']['reply_markup']['inline_keyboard'];
 
-    expect($rows[0][0])->toMatchArray(['text' => 'All games', 'url' => 'https://kemerbet.co/games'])
+    expect($rows[0][0])->toMatchArray(['text' => 'All games', 'url' => 'https://example.test/games'])
         ->and(end($rows)[0]['text'])->toContain('Back')
         ->and(end($rows)[0]['callback_data'])->toBe('menu:0');
 });
@@ -57,15 +57,15 @@ it('returns to the main menu via menu:0', function () {
 });
 
 it('renders url and webapp items as link buttons, not callbacks', function () {
-    menuItem(['action_type' => 'url', 'url' => 'https://kemerbet.co', 'position' => 0], label: 'Website');
-    menuItem(['action_type' => 'webapp', 'url' => 'https://kemerbet.co/app', 'position' => 1], label: 'Mini App');
+    menuItem(['action_type' => 'url', 'url' => 'https://example.test', 'position' => 0], label: 'Website');
+    menuItem(['action_type' => 'webapp', 'url' => 'https://example.test/app', 'position' => 1], label: 'Mini App');
 
     postWebhook(telegramCallbackUpdate(6001, 'menu:0'));
 
     $rows = fakeTelegram()->lastSentTo(6001)['params']['reply_markup']['inline_keyboard'];
 
-    expect($rows[0][0])->toMatchArray(['text' => 'Website', 'url' => 'https://kemerbet.co'])
-        ->and($rows[1][0])->toMatchArray(['text' => 'Mini App', 'web_app' => ['url' => 'https://kemerbet.co/app']]);
+    expect($rows[0][0])->toMatchArray(['text' => 'Website', 'url' => 'https://example.test'])
+        ->and($rows[1][0])->toMatchArray(['text' => 'Mini App', 'web_app' => ['url' => 'https://example.test/app']]);
 });
 
 it('hides inactive items from keyboards', function () {

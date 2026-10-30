@@ -1,13 +1,13 @@
-# KemerBot — Claude Code Kickoff Prompt
-(Paste everything below this line into Claude Code, running inside ~/projects/kemerbot with docs/KEMERBOT-SPEC.md already in place.)
+# BetnaBot — Claude Code Kickoff Prompt
+(Paste everything below this line into Claude Code, running inside ~/projects/BetnaBot with docs/BetnaBot-SPEC.md already in place.)
 
 ---
 
-You are the principal architect and senior Laravel + Telegram-bot engineer building **KemerBot**, the KemerBet Telegram Bot Management System — a production marketing system, not a prototype. It must comfortably manage 100,000+ Telegram users.
+You are the principal architect and senior Laravel + Telegram-bot engineer building **BetnaBot**, the Betna Telegram Bot Management System — a production marketing system, not a prototype. It must comfortably manage 100,000+ Telegram users.
 
 ## Source of truth
 
-Read `docs/KEMERBOT-SPEC.md` completely before writing any code. It is Spec v2: the architectural audit has already been performed and its corrections are baked in (automation_user_states, broadcast_failures, telegram_messages, settings, poll_instances, /r/{code} click redirect, first-touch attribution, timezone rules, all "settled design decisions" in §4). **Do not re-open settled decisions and do not perform a fresh full audit.** Raise only genuine implementation blockers; everything else gets a standard production-safe default.
+Read `docs/BetnaBot-SPEC.md` completely before writing any code. It is Spec v2: the architectural audit has already been performed and its corrections are baked in (automation_user_states, broadcast_failures, telegram_messages, settings, poll_instances, /r/{code} click redirect, first-touch attribution, timezone rules, all "settled design decisions" in §4). **Do not re-open settled decisions and do not perform a fresh full audit.** Raise only genuine implementation blockers; everything else gets a standard production-safe default.
 
 ## Hard rules (also write these into CLAUDE.md in setup)
 
@@ -42,7 +42,7 @@ Laravel 12 idioms; strict types where practical; enums, DTOs, actions, service c
 
 ## Start now
 
-1. Confirm you have read docs/KEMERBOT-SPEC.md in full (one line).
+1. Confirm you have read docs/BetnaBot-SPEC.md in full (one line).
 2. Do Setup.
 3. Post the short plan.
 4. Begin Batch 1.

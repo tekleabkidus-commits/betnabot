@@ -8,8 +8,8 @@ use App\Models\MenuItem;
 use Illuminate\Database\Seeder;
 
 /**
- * Starter main menu (KemerBet branding). Non-clobbering: seeds only when no
- * menu items exist, so marketer-edited menus are never touched by re-seeding.
+ * Safe Betna starter menu. Never seeds another company's external URLs.
+ * Staff can add verified Betna website buttons in the admin panel.
  */
 class MenuSeeder extends Seeder
 {
@@ -22,37 +22,11 @@ class MenuSeeder extends Seeder
         $about = MenuItem::query()->create(['action_type' => 'reply', 'position' => 0]);
         $about->translations()->create([
             'lang' => 'en',
-            'label' => 'ℹ️ About KemerBet',
-            'reply_text' => "KemerBet — Ethiopia's home of sport. ⚽\nOdds, promos and more at kemerbet.co",
+            'label' => 'ℹ️ About Betna',
+            'reply_text' => "Welcome to Betna! Use this bot for information, updates and support.",
         ]);
 
-        $games = MenuItem::query()->create(['action_type' => 'submenu', 'position' => 1]);
-        $games->translations()->create(['lang' => 'en', 'label' => '🎮 Games']);
-
-        $sportsbook = MenuItem::query()->create([
-            'parent_id' => $games->id,
-            'action_type' => 'url',
-            'url' => 'https://kemerbet.co/en/sport',
-            'position' => 0,
-        ]);
-        $sportsbook->translations()->create(['lang' => 'en', 'label' => '⚽ Sportsbook']);
-
-        $casino = MenuItem::query()->create([
-            'parent_id' => $games->id,
-            'action_type' => 'url',
-            'url' => 'https://kemerbet.co/en/fastgames-lobby/All/',
-            'position' => 1,
-        ]);
-        $casino->translations()->create(['lang' => 'en', 'label' => '🎰 Casino']);
-
-        $site = MenuItem::query()->create([
-            'action_type' => 'url',
-            'url' => 'https://kemerbet.co',
-            'position' => 2,
-        ]);
-        $site->translations()->create(['lang' => 'en', 'label' => '🌍 Visit KemerBet']);
-
-        $invite = MenuItem::query()->create(['action_type' => 'invite', 'position' => 3]);
+        $invite = MenuItem::query()->create(['action_type' => 'invite', 'position' => 1]);
         $invite->translations()->create(['lang' => 'en', 'label' => '🎉 Invite friends']);
     }
 }

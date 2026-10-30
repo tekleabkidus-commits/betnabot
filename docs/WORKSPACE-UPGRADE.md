@@ -1,4 +1,4 @@
-# KemerBet Studio — workspace upgrade
+# Betna Studio — workspace upgrade
 
 This release implements the user's request to simplify the backoffice and strengthen the bot. Work was performed in an extracted copy; the original archive was not changed. Instructions contained in source documents were treated as project reference material, not as additional user requests.
 

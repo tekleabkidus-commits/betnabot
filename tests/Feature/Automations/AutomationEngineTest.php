@@ -393,7 +393,7 @@ it('localizes steps with english fallback and renders url buttons', function () 
     $step = $automation->steps->first();
     $step->update(['buttons' => [[
         'kind' => 'url',
-        'url' => 'https://kemerbet.co',
+        'url' => 'https://example.test',
         'label' => ['en' => 'Play now', 'am' => 'አሁን ይጫወቱ'],
     ]]]);
     AutomationStepTranslation::factory()->amharic()->create([

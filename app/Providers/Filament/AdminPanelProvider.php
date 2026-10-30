@@ -29,13 +29,13 @@ class AdminPanelProvider extends PanelProvider
             ->path('admin')
             ->login()->profile()
             ->multiFactorAuthentication([AppAuthentication::make()], isRequired: fn () => ! app()->environment(['local', 'testing']))
-            ->brandName('KemerBet Studio')->brandLogo(fn () => view('filament.brand'))->brandLogoHeight('40px')
+            ->brandName('Betna Studio')->brandLogo(fn () => view('filament.brand'))->brandLogoHeight('40px')
             ->homeUrl(fn () => Home::getUrl())->sidebarWidth('240px')->sidebarCollapsibleOnDesktop()
-            ->renderHook('panels::head.end', fn () => new HtmlString('<link rel="stylesheet" href="'.asset('css/kemer-workspace.css').'"><link rel="stylesheet" href="'.asset('css/kemer-chat.css').'"><link rel="stylesheet" href="'.asset('css/kemer-2026.css').'?v=20261027"><link rel="stylesheet" href="'.asset('css/studio-reference.css').'?v=20261027b">'))
+            ->renderHook('panels::head.end', fn () => new HtmlString('<link rel="stylesheet" href="'.asset('css/betna-workspace.css').'"><link rel="stylesheet" href="'.asset('css/betna-chat.css').'"><link rel="stylesheet" href="'.asset('css/betna-2026.css').'?v=20261030betna"><link rel="stylesheet" href="'.asset('css/studio-reference.css').'?v=20261030betna"><link rel="stylesheet" href="'.asset('css/betna-theme.css').'?v=20261030betna"><link rel="icon" type="image/svg+xml" href="'.asset('betna-mark.svg').'">'))
             ->renderHook('panels::topbar.start', fn () => new HtmlString(view('filament.partials.studio-utilitybar')->render()))
             ->renderHook('panels::body.end', fn () => new HtmlString(view('filament.mobile-nav')->render()))
             ->colors([
-                'primary' => Color::Emerald,
+                'primary' => Color::Violet,
             ])
             // Spec §12 navigation: Overview · Engagement · Bot Content · Audience · Administration.
             ->navigationGroups([

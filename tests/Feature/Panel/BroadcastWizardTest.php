@@ -26,7 +26,7 @@ it('creates and immediately sends a broadcast through the wizard', function () {
             'text_en' => 'Big weekend odds, {first_name}!',
             'buttons_data' => [[
                 'kind' => 'url',
-                'url' => 'https://kemerbet.co',
+                'url' => 'https://example.test',
                 'label' => ['en' => 'Bet now'],
                 'row' => 0,
             ]],

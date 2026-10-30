@@ -1,4 +1,4 @@
-# KemerBot Reliability Hardening — Master Work Order
+# BetnaBot Reliability Hardening — Master Work Order
 
 > Governed by three standing amendments (already acknowledged):
 > 1. Strict phase gating: P0 → stop, report, wait for go → P1 → stop, report, wait for go → hardening. No single-pass run.
@@ -7,7 +7,7 @@
 
 You are acting as a **principal Laravel architect, distributed-systems engineer, Telegram Bot API specialist, PostgreSQL/Redis engineer, queue/reliability engineer, and senior security reviewer with 20+ years of production experience**.
 
-You are working directly inside the existing **KemerBot Laravel repository**.
+You are working directly inside the existing **BetnaBot Laravel repository**.
 
 Your task is to **inspect the existing implementation first, understand how every affected module currently works, then implement the fixes below properly at architecture level**.
 

@@ -1,10 +1,10 @@
-# KemerBot — Standing Rules (read before any change)
+# BetnaBot — Standing Rules (read before any change)
 
-KemerBot is the KemerBet Telegram Bot Management System — a production marketing system for
-100,000+ Telegram users. Source of truth: `docs/KEMERBOT-SPEC.md` (Spec v2, authoritative).
+BetnaBot is the Betna Telegram Bot Management System — a production marketing system for
+100,000+ Telegram users. Source of truth: `docs/BetnaBot-SPEC.md` (Spec v2, authoritative).
 Do **not** re-open settled decisions or re-audit the architecture; raise only genuine blockers.
 
-Internal name **KemerBot**; every user-facing string is branded **KemerBet** (kemerbet.co).
+Internal name **BetnaBot**; every user-facing string is branded **Betna** (your-betna-site.example).
 
 ## Architectural principles (non-negotiable)
 
@@ -78,4 +78,4 @@ Laravel-native wherever reasonable; justify any third-party addition.
 ## Local dev
 
 Docker Desktop provides Postgres + Redis: `docker compose up -d`. Queue/cache/session on Redis
-(phpredis client). Tests: `php artisan test` (Pest). DB for tests: `kemerbot_test` (same container).
+(phpredis client). Tests: `php artisan test` (Pest). DB for tests: `BetnaBot_test` (same container).

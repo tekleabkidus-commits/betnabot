@@ -62,7 +62,7 @@ Allowed events are `registration`, `deposit`, and `purchase`; currencies are ETB
 
 ## Verification
 
-The test suite uses a separate database `kemerbot_test` and Redis database 15. Default local test ports are PostgreSQL 5445 and Redis 6381, matching the included local Compose file. The isolated test cluster uses dummy local credentials only. Run `vendor/bin/pest`; Telegram is faked throughout.
+The test suite uses a separate database `BetnaBot_test` and Redis database 15. Default local test ports are PostgreSQL 5445 and Redis 6381, matching the included local Compose file. The isolated test cluster uses dummy local credentials only. Run `vendor/bin/pest`; Telegram is faked throughout.
 
 For release checks run `composer validate --strict`, `composer audit`, `npm audit`, `npm run build`, and `vendor/bin/pint --test --dirty`. Dependency advisories change; run the audits during each deployment.
 

@@ -12,14 +12,14 @@ beforeEach(fn () => $this->seed(SettingsSeeder::class));
 it('sends english welcomes to users regardless of telegram language', function (string $language) {
     postWebhook(telegramMessageUpdate(4001, '/start', ['language_code' => $language]));
 
-    expect(fakeTelegram()->lastSentTo(4001)['params']['text'])->toContain('Welcome to KemerBet');
+    expect(fakeTelegram()->lastSentTo(4001)['params']['text'])->toContain('Welcome to Betna');
 })->with(['en', 'am', 'ru']);
 
 it('ignores any previously configured amharic default', function () {
     app(SettingsService::class)->set('bot.default_language', 'am');
     postWebhook(telegramMessageUpdate(4001, '/start', ['language_code' => 'am']));
 
-    expect(fakeTelegram()->lastSentTo(4001)['params']['text'])->toContain('Welcome to KemerBet');
+    expect(fakeTelegram()->lastSentTo(4001)['params']['text'])->toContain('Welcome to Betna');
 });
 
 it('always renders the english menu label for all users', function () {

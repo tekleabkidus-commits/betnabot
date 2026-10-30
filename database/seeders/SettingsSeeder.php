@@ -21,9 +21,9 @@ class SettingsSeeder extends Seeder
             'bot.default_language' => 'en',
             'telegram.send_rate' => (int) config('telegram.send_rate'),
             'broadcast.test_recipient_chat_ids' => [],
-            'webapp.url' => 'https://kemerbet.co/en/sport',
+            'webapp.url' => null,
             'welcome.message' => [
-                'en' => "Welcome to KemerBet, {first_name}! ⚽\nUse the menu below to explore matches, promos and more.",
+                'en' => "Welcome to Betna, {first_name}! ⚽\nUse the menu below to explore matches, promos and more.",
             ],
             'welcome.media_file_id' => null,
             'features' => [

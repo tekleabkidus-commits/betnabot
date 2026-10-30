@@ -16,12 +16,14 @@ it('round-trips scalar and array jsonb values', function () {
         ->toEqual(['en' => 'Hi', 'am' => 'ሰላም']);
 });
 
-it('seeds default settings including a bilingual welcome message', function () {
+it('seeds English-only Betna welcome settings', function () {
     $this->seed(SettingsSeeder::class);
 
     $welcome = Setting::query()->where('key', 'welcome.message')->first();
 
-    expect($welcome->value)->toHaveKeys(['en', 'am'])
+    expect($welcome->value)->toHaveKeys(['en'])
+        ->and($welcome->value)->not->toHaveKey('am')
+        ->and($welcome->value['en'])->toContain('Betna')
         ->and(Setting::query()->where('key', 'bot.default_language')->first()->value)->toBe('en')
         ->and(Setting::query()->where('key', 'telegram.send_rate')->first()->value)->toBe(25);
 });

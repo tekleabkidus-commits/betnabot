@@ -19,7 +19,7 @@
                     <line x1="0" y1="18" x2="720" y2="18" stroke="#e7eff0" stroke-dasharray="3 6"/>
                     <line x1="0" y1="91" x2="720" y2="91" stroke="#e7eff0" stroke-dasharray="3 6"/>
                     <line x1="0" y1="170" x2="720" y2="170" stroke="#e7eff0"/>
-                    <polyline points="{{ $sendingLine }}" stroke="#159963" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                    <polyline points="{{ $sendingLine }}" stroke="#7c3aed" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
                     <polyline points="{{ $joiningLine }}" stroke="#3986e9" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
                 </svg>
                 <div class="studio-chart-axis"><span>{{ \Carbon\Carbon::parse(array_key_first($joins))->format('M d') }}</span><span>{{ now()->timezone(config('app.display_timezone'))->format('M d') }}</span></div>

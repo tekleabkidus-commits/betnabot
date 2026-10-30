@@ -65,6 +65,6 @@ class Reports extends Page
             foreach (Broadcast::query()->orderBy('id')->cursor() as $b) {
                 fputcsv($out, [preg_match('/^[=+@\-\t\r]/', $b->name ?? '') ? "'".$b->name : ($b->name ?? '#'.$b->id), $b->status->value, $b->queued, $b->sent, $b->blocked, $b->failed, $b->skipped]);
             }fclose($out);
-        }, 'kemerbet-campaigns.csv'))];
+        }, 'Betna-campaigns.csv'))];
     }
 }

@@ -29,8 +29,8 @@ class AutomationStepFactory extends Factory
         return $this->state([
             'buttons' => [[
                 'kind' => 'url',
-                'url' => 'https://kemerbet.co',
-                'label' => ['en' => 'Visit KemerBet', 'am' => 'KemerBet ይጎብኙ'],
+                'url' => 'https://example.test',
+                'label' => ['en' => 'Visit Betna', 'am' => 'Betna ይጎብኙ'],
             ]],
         ]);
     }

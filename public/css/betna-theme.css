@@ -1,0 +1,36 @@
+/* Betna's distinct visual identity: royal-violet, lavender, ink. Loaded after workspace styles. */
+:root {
+ --betna-primary:#6d28d9; --betna-primary-hover:#5b21b6; --betna-primary-active:#4c1d95;
+ --betna-accent:#a855f7; --betna-light:#f3e8ff; --betna-surface:#faf8ff;
+ --betna-ink:#231338; --betna-border:#e9def7;
+ --kb-green:#6d28d9; --kb-bg:#faf8ff; --kb-ink:#231338; --kb-border:#e9def7; --kb-muted:#716783;
+ --ks-forest:#5b21b6; --ks-deep:#4c1d95; --ks-primary:#6d28d9; --ks-primary-hover:#5b21b6;
+ --ks-mint:#f3e8ff; --ks-mint-strong:#e9d5ff; --ks-ink:#231338; --ks-muted:#716783;
+ --ks-canvas:#faf8ff; --ks-border:#e9def7; --ks-soft-border:#f1e9fa; --ks-focus:#a78bfa;
+ --studio-green:#6d28d9; --studio-green-dark:#5b21b6; --studio-green-soft:#f3e8ff;
+ --studio-ink:#231338; --studio-bg:#faf8ff; --studio-line:#e9def7;
+ --kc-green:#6d28d9; --kc-mint:#f3e8ff; --kc-line:#e9def7; --kc-text:#231338; --kc-sub:#716783;
+}
+body.fi-body {background:#faf8ff !important; color:#231338 !important}
+.fi-sidebar {background:#fff !important; border-right-color:#e9def7 !important}
+.fi-sidebar-header {border-color:#e9def7 !important}
+.fi-topbar nav {background:#fff !important; border-color:#e9def7 !important}
+.fi-sidebar-item.fi-active .fi-sidebar-item-button{background:#f3e8ff !important;box-shadow:inset 3px 0 0 #6d28d9 !important}
+.fi-sidebar-item.fi-active .fi-sidebar-item-label,.fi-sidebar-item.fi-active .fi-sidebar-item-icon{color:#5b21b6 !important}
+.fi-sidebar-item-button:hover {background:#f5f0ff !important}
+.fi-btn-color-primary,.fi-btn.fi-color-primary,.kb-button,.ks-action-primary,.kb-chat-send{background:#6d28d9 !important;color:#fff !important}
+.fi-btn-color-primary:hover,.fi-btn.fi-color-primary:hover,.kb-button:hover,.ks-action-primary:hover,.kb-chat-send:hover{background:#5b21b6 !important}
+.fi-input:focus,.fi-input-wrp:focus-within,textarea:focus,input:focus{--tw-ring-color:#a78bfa}
+.fi-tabs-item.fi-active,.fi-tabs-item[aria-selected="true"]{color:#6d28d9 !important}
+::selection{background:#e9d5ff;color:#3b0764}
+.kb-logo>span {background:linear-gradient(140deg,#7c3aed,#4c1d95);color:#fff;font-weight:900;box-shadow:0 6px 14px #6d28d92b}
+.kb-logo small{color:#7a7190}
+.studio-dashboard-card,.fi-section,.fi-ta{border-color:#e9def7 !important}
+.studio-legend-green{background:#7c3aed !important}
+.studio-tag.green{color:#5b21b6 !important;background:#f3e8ff !important}
+.studio-action-icon.green{background:#ede2ff !important;color:#6d28d9 !important}
+.kb-inbox-layout,.kb-profile-layout{--kc-green:#6d28d9;--kc-mint:#f3e8ff;--kc-line:#e9def7}
+.kb-outgoing .kb-chat-bubble{background:#eee5ff !important;color:#32195a}
+.kb-chat-contact.is-selected{background:#f1e8ff !important}
+.kb-chat-contact-avatar,.kb-chat-avatar{background:#e9d5ff;color:#5b21b6}
+.kb-chat-contact-avatar:hover{background:#ddd0fb}

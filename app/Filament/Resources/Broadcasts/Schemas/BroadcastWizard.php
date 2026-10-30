@@ -84,8 +84,8 @@ class BroadcastWizard
                         ->seconds(false)
                         ->required(fn (Get $get): bool => $get('type') === 'match_card'),
                     TextInput::make('tf_cta')->label('Call to action')
-                        ->default('Bet now: https://kemerbet.co/en/sport')
-                        ->placeholder('Bet now: https://kemerbet.co/en/sport'),
+                        ->default(null)
+                        ->placeholder('Enter your verified Betna website URL'),
                     TextInput::make('tf_odds_home')->label('Odds — home (1)'),
                     TextInput::make('tf_odds_draw')->label('Odds — draw (X)'),
                     TextInput::make('tf_odds_away')->label('Odds — away (2)'),

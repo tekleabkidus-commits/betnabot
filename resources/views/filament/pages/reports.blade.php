@@ -34,7 +34,7 @@
                     <line x1="0" x2="720" y1="91" y2="91" stroke="#e7eff0" stroke-dasharray="3 5"/>
                     <line x1="0" x2="720" y1="170" y2="170" stroke="#e7eff0"/>
                     <polyline points="{{ $joiningLine }}" fill="none" stroke="#3988e5" stroke-width="2.5" stroke-linejoin="round"/>
-                    <polyline points="{{ $sendingLine }}" fill="none" stroke="#159963" stroke-width="2.5" stroke-linejoin="round"/>
+                    <polyline points="{{ $sendingLine }}" fill="none" stroke="#7c3aed" stroke-width="2.5" stroke-linejoin="round"/>
                 </svg>
                 <div class="studio-chart-axis"><span>{{ \Carbon\Carbon::parse(array_key_first($joins))->format('M d') }}</span><span>{{ now()->timezone(config('app.display_timezone'))->format('M d') }}</span></div>
             </div>

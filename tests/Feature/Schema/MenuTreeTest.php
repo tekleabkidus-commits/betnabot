@@ -30,13 +30,13 @@ it('cascades children and translations when a parent is deleted', function () {
 it('supports all four action types', function () {
     $reply = MenuItem::factory()->create();
     $submenu = MenuItem::factory()->submenu()->create();
-    $url = MenuItem::factory()->url('https://kemerbet.co/promo')->create();
+    $url = MenuItem::factory()->url('https://example.test/promo')->create();
     $webapp = MenuItem::factory()->webapp()->create();
 
     expect($reply->action_type)->toBe(MenuActionType::Reply)
         ->and($submenu->action_type)->toBe(MenuActionType::Submenu)
         ->and($url->action_type)->toBe(MenuActionType::Url)
-        ->and($url->url)->toBe('https://kemerbet.co/promo')
+        ->and($url->url)->toBe('https://example.test/promo')
         ->and($webapp->action_type)->toBe(MenuActionType::Webapp);
 });
 

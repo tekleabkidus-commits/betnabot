@@ -21,7 +21,7 @@ class BroadcastButtonFactory extends Factory
             'row' => 0,
             'position' => 0,
             'kind' => ButtonKind::Url,
-            'url' => 'https://kemerbet.co',
+            'url' => 'https://example.test',
         ];
     }
 

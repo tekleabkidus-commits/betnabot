@@ -1,6 +1,6 @@
-# KemerBot — Progress Log
+# BetnaBot — Progress Log
 
-Spec: `docs/KEMERBOT-SPEC.md` (Spec v2, authoritative). Process: 4 batches per spec §15;
+Spec: `docs/BetnaBot-SPEC.md` (Spec v2, authoritative). Process: 4 batches per spec §15;
 each batch ends with green tests, a batch report, and a stop for user review.
 
 ## Status
@@ -18,7 +18,7 @@ each batch ends with green tests, a batch report, and a stop for user review.
 ### 2026-08-17 — Setup
 - git init (branch `main`); `CLAUDE.md` written (principles, settled decisions, batch process, quality bar).
 - `docker-compose.yml`: Postgres 17 (host port **5445**) + Redis 7 (host port **6381**) — 5432/6379/5433
-  were taken by other local projects. Test DB `kemerbot_test` auto-created via init SQL.
+  were taken by other local projects. Test DB `BetnaBot_test` auto-created via init SQL.
 - Environment caveat: host PHP is missing `intl`, `zip`, `gd`, `bcmath`, `redis` extensions (no sudo in
   session). Workarounds in place: `unzip` binary for composer, `predis` for Redis, composer
   `config.platform` entries for ext-intl/ext-zip. Everything runs (85 tests green, panel serves 200),
@@ -52,7 +52,7 @@ each batch ends with green tests, a batch report, and a stop for user review.
   - `polls.broadcast_id` unique (one poll definition per poll broadcast).
   - `created_by`/`admin_id` FKs are nullOnDelete so campaign history and audit trail survive
     admin deletion; audit_logs has created_at only (append-only).
-- Tests: **85 passed (184 assertions)** on real Postgres (kemerbot_test) — uniques, FK cascade/null
+- Tests: **85 passed (184 assertions)** on real Postgres (BetnaBot_test) — uniques, FK cascade/null
   rules, CHECK constraints, jsonb round-trips (incl. Amharic), enum casts, seeders, every factory,
   panel login (guest 200, guest redirect, authed admin 200).
 - `migrate:fresh --seed` green; `/admin/login` serves HTTP 200; Pint clean.

@@ -1,4 +1,4 @@
-# KemerBet Audience Studio — Reference UI implementation (2026-10-27)
+# Betna Audience Studio — Reference UI implementation (2026-10-27)
 
 ## Source of design truth
 
@@ -6,7 +6,7 @@ The user-approved 2026 desktop Inbox screenshot and full-platform showcase are t
 
 ## Implemented in code
 
-- Shared compact white sidebar / top toolbar, KemerBet green & mint tokens, modern cards, buttons, inputs, badges, validation states, modals, data tables, responsive spacing.
+- Shared compact white sidebar / top toolbar, Betna green & mint tokens, modern cards, buttons, inputs, badges, validation states, modals, data tables, responsive spacing.
 - Home: 4 data-backed KPIs, real delivery and joins chart, quick actions, conversations and campaign performance.
 - Inbox: 4 KPI cards; three-column conversation list, chat and CRM inspector; responsive independent views on narrow screens; real Telegram chat history, reply composer, quick reply drafts, notes, consent indicators, activity and delivery history; staff permissions enforced by existing roles.
 - People/CRM: native searchable/filterable Filament table, quick profile preview and full conversation profile.

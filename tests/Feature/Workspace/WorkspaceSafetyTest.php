@@ -326,7 +326,7 @@ it('seeds the local example owner when optional seed variables are blank', funct
     Env::getRepository()->set('SEED_ADMIN_PASSWORD', '');
     try {
         $this->seed(AdminSeeder::class);
-        $admin = Admin::where('email', 'owner@kemerbet.co')->first();
+        $admin = Admin::where('email', 'owner@example.test')->first();
         expect($admin)->not->toBeNull()->and(Hash::check('password', $admin->password))->toBeTrue();
     } finally {
         Env::getRepository()->clear('SEED_ADMIN_EMAIL');
